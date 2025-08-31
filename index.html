@@ -7,7 +7,14 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="game-container">
+    <!-- Start Screen -->
+    <div id="start-screen" style="display:flex; flex-direction:column; align-items:center; justify-content:center; height:100vh;">
+        <h1>Snake Game</h1>
+        <button id="start-btn">Start Game</button>
+    </div>
+
+    <!-- Game Container -->
+    <div class="game-container" style="display:none;" id="game-container">
         <div class="score-board">
             <div class="score">Score: <span id="score">0</span></div>
             <div class="high-score">Best: <span id="high-score">0</span></div>
@@ -20,12 +27,13 @@
         </div>
     </div>
 
-    <div class="game-over" id="game-over">
+    <!-- Game Over Screen -->
+    <div class="game-over" id="game-over" style="display:none; flex-direction:column; align-items:center;">
         <div class="game-over-content">
             <h2>Game Over!</h2>
             <p>Your Score: <span id="final-score">0</span></p>
-            <p id="new-record" class="new-record" style="display: none;">🎉 New High Score! 🎉</p>
-            <button class="restart-btn" onclick="restartGame()">Play Again</button>
+            <p id="new-record" style="display:none;">🎉 New Record!</p>
+            <button class="restart-btn" onclick="restartGame()">Restart</button>
         </div>
     </div>
 
